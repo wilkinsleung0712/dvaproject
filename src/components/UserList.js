@@ -3,7 +3,7 @@ import { Button, Popconfirm, Table } from 'antd';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const UserList = ({list, total, onEdit, onDelete}) => {
+const UserList = ({users, total, onEdit, onDelete}) => {
 
     const columns = [{
         title: 'Name',
@@ -32,7 +32,7 @@ const UserList = ({list, total, onEdit, onDelete}) => {
 
     return (
         <Table 
-            dataSource={list}
+            dataSource={users}
             columns={columns}
             pagination={total}
          />
@@ -40,7 +40,7 @@ const UserList = ({list, total, onEdit, onDelete}) => {
 }
 
 UserList.propTypes = {
-    list: PropTypes.array.isRequired,
+    users: PropTypes.array.isRequired,
     total: PropTypes.number.isRequired,
     onDelete: PropTypes.func.isRequired,
     onEdit: PropTypes.func.isRequired

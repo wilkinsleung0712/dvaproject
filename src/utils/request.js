@@ -1,17 +1,7 @@
 import fetch from 'dva/fetch';
 
 function parseJSON(response) {
-  const data = response.json();
-  const res = {
-    data,
-    headers:{}
-  };
-
-  if (response.headers.get('x-total-count')) {
-    res.headers['x-total-count'] = response.headers.get('x-total-count');
-  }
-
-  return res;
+  return response.json();
 }
 
 function checkStatus(response) {
