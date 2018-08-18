@@ -2,12 +2,14 @@ import { Button, Popconfirm, Table } from 'antd';
 
 import PropTypes from 'prop-types';
 import React from 'react';
+import styles from './UserList.css';
 
 const UserList = ({users, total, onEdit, onDelete}) => {
 
     const columns = [{
         title: 'Name',
         dataIndex: 'name',
+        render: text => <a href=''>{text}</a>
     }, {
         title: 'Email',
         dataIndex:'email'
@@ -17,17 +19,15 @@ const UserList = ({users, total, onEdit, onDelete}) => {
     }, {
         title: 'Operation',
         render: (text, record) => (
-            <div>
-                <Popconfirm title="Edit?" onConfirm={() => onEdit(record.id)}>
-                    <Button>Edit</Button>
-                </Popconfirm>
+            <span className={styles.operation}>
+                <a href=''>Edit</a>
                 <Popconfirm title="Delete?" onConfirm={() => onDelete(record.id)}>
-                    <Button>Delete</Button>
+                    <a href=''>Delete</a>
                 </Popconfirm>
-            </div>
+            </span>
         )
-        
-    }];
+    }
+    ];
 
 
     return (
