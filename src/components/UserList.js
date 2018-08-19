@@ -5,6 +5,7 @@ import React from 'react';
 import styles from './UserList.css';
 
 const UserList = ({users, total, onEdit, onDelete}) => {
+const UserList = ({users, total, onEdit, loading, onDelete}) => {
 
     const columns = [{
         title: 'Name',
@@ -33,6 +34,7 @@ const UserList = ({users, total, onEdit, onDelete}) => {
     return (
         <Table 
             dataSource={users}
+            loading={loading}
             columns={columns}
             pagination={total}
          />
