@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styles from './UserList.css';
 
-const UserList = ({users, total, onEdit, onDelete}) => {
 const UserList = ({users, total, onEdit, loading, onDelete}) => {
 
     const columns = [{
@@ -30,13 +29,18 @@ const UserList = ({users, total, onEdit, loading, onDelete}) => {
     }
     ];
 
-
     return (
         <Table 
             dataSource={users}
             loading={loading}
             columns={columns}
-            pagination={total}
+            total={total}
+            pagination={
+                { 
+                    total,
+                    pageSize: 5
+                }
+            }
          />
     )
 }

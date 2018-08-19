@@ -16,7 +16,6 @@ export default {
         // 而 Effects 主要是 控制数据流程  ，所以最终往往我们在 Effects 中会调用 Reducers。
         *fetch({ payload: {page} = 1}, { call, put}) {
             const {data, headers} = yield call(usersService.fetch, { page });
-            console.log('data', data)
             yield put({type: 'save', payload: {data, total: 10}})
         }
     },
