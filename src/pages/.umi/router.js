@@ -13,29 +13,38 @@ Router = ConnectedRouter;
 
 let routes = [
   {
-    "path": "/count",
-    "exact": true,
-    "component": require('../count/page.js').default
-  },
-  {
-    "path": "/example",
-    "exact": true,
-    "component": require('../example/page.js').default
-  },
-  {
     "path": "/",
-    "exact": true,
-    "component": require('../index.js').default
-  },
-  {
-    "path": "/products",
-    "exact": true,
-    "component": require('../products/page.js').default
-  },
-  {
-    "path": "/users",
-    "exact": true,
-    "component": require('../users/page.js').default
+    "component": require('../../layouts/index.js').default,
+    "routes": [
+      {
+        "path": "/count",
+        "exact": true,
+        "component": require('../count/page.js').default
+      },
+      {
+        "path": "/example",
+        "exact": true,
+        "component": require('../example/page.js').default
+      },
+      {
+        "path": "/",
+        "exact": true,
+        "component": require('../index.js').default
+      },
+      {
+        "path": "/products",
+        "exact": true,
+        "component": require('../products/page.js').default
+      },
+      {
+        "path": "/users",
+        "exact": true,
+        "component": require('../users/page.js').default
+      },
+      {
+        "component": () => React.createElement(require('/Users/weiqiangliang/.nvm/versions/node/v10.7.0/lib/node_modules/umi/node_modules/umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/pages', routes: '[{"path":"/","component":"./src/layouts/index.js","routes":[{"path":"/count","exact":true,"component":"./src/pages/count/page.js"},{"path":"/example","exact":true,"component":"./src/pages/example/page.js"},{"path":"/","exact":true,"component":"./src/pages/index.js"},{"path":"/products","exact":true,"component":"./src/pages/products/page.js"},{"path":"/users","exact":true,"component":"./src/pages/users/page.js"}]}]' })
+      }
+    ]
   }
 ];
 

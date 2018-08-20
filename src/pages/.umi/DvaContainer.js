@@ -10,10 +10,10 @@ let app = dva({
 window.g_app = app;
 app.use(createLoading());
 
-app.model({ namespace: 'counter', ...(require('/Users/wilkinsliang/private/dvaproject/src/pages/count/models/counter.js').default) });
-app.model({ namespace: 'example', ...(require('/Users/wilkinsliang/private/dvaproject/src/pages/example/models/example.js').default) });
-app.model({ namespace: 'products', ...(require('/Users/wilkinsliang/private/dvaproject/src/pages/products/models/products.js').default) });
-app.model({ namespace: 'users', ...(require('/Users/wilkinsliang/private/dvaproject/src/pages/users/models/users.js').default) });
+app.model({ namespace: 'counter', ...(require('/Users/weiqiangliang/GIitHub/dvaproject/src/pages/count/models/counter.js').default) });
+app.model({ namespace: 'example', ...(require('/Users/weiqiangliang/GIitHub/dvaproject/src/pages/example/models/example.js').default) });
+app.model({ namespace: 'products', ...(require('/Users/weiqiangliang/GIitHub/dvaproject/src/pages/products/models/products.js').default) });
+app.model({ namespace: 'users', ...(require('/Users/weiqiangliang/GIitHub/dvaproject/src/pages/users/models/users.js').default) });
 
 class DvaContainer extends Component {
   render() {
