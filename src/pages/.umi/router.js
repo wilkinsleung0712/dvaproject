@@ -42,7 +42,7 @@ let routes = [
         "component": require('../users/page.js').default
       },
       {
-        "component": () => React.createElement(require('/Users/weiqiangliang/.nvm/versions/node/v10.7.0/lib/node_modules/umi/node_modules/umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/pages', routes: '[{"path":"/","component":"./src/layouts/index.js","routes":[{"path":"/count","exact":true,"component":"./src/pages/count/page.js"},{"path":"/example","exact":true,"component":"./src/pages/example/page.js"},{"path":"/","exact":true,"component":"./src/pages/index.js"},{"path":"/products","exact":true,"component":"./src/pages/products/page.js"},{"path":"/users","exact":true,"component":"./src/pages/users/page.js"}]}]' })
+        "component": () => React.createElement(require('/Users/weiqiangliang/GIitHub/dvaproject/node_modules/umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/pages', routes: '[{"path":"/","component":"./src/layouts/index.js","routes":[{"path":"/count","exact":true,"component":"./src/pages/count/page.js"},{"path":"/example","exact":true,"component":"./src/pages/example/page.js"},{"path":"/","exact":true,"component":"./src/pages/index.js"},{"path":"/products","exact":true,"component":"./src/pages/products/page.js"},{"path":"/users","exact":true,"component":"./src/pages/users/page.js"}]}]' })
       }
     ]
   }

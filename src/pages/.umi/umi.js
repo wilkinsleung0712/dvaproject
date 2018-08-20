@@ -36,6 +36,7 @@ if (module.hot) {
   });
 }
 
+require('/Users/weiqiangliang/GIitHub/dvaproject/src/global.css');
 // Enable service worker
 if (process.env.NODE_ENV === 'production') {
   require('./registerServiceWorker');
