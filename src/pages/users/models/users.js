@@ -26,6 +26,14 @@ export default {
                 type: 'fetch', 
                 payload: { page } 
             })
+        },
+        *path({payload: {id, values}}, {call, put, select}) {
+            yield call(usersService.path, {id, values});
+            const page = yield select(state => state.users.page);
+            yield put({
+                type: 'fetch', 
+                payload: { page } 
+            })
         }
     },
     subscriptions: {

@@ -1,7 +1,8 @@
-import { Button, Pagination, Popconfirm, Table } from 'antd';
+import { Pagination, Popconfirm, Table } from 'antd';
 
 import PropTypes from 'prop-types';
 import React from 'react';
+import UserModal from './UserModal';
 import styles from './UserList.css';
 
 const UserList = ({users, total, onEdit, loading, onDelete, onChange, page: current}) => {
@@ -15,12 +16,14 @@ const UserList = ({users, total, onEdit, loading, onDelete, onChange, page: curr
         dataIndex:'email'
     }, {
         title: 'Website',
-        dataIndex: 'Website'
+        dataIndex: 'website'
     }, {
         title: 'Operation',
         render: (text, record) => (
             <span className={styles.operation}>
-                <a href=''>Edit</a>
+                <UserModal record={record} title='Edit User'>
+                    <a>Edit</a>
+                </UserModal>
                 <Popconfirm title="Delete?" onConfirm={() => onDelete(record.id)}>
                     <a href=''>Delete</a>
                 </Popconfirm>

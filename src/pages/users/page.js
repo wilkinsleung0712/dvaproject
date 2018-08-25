@@ -18,10 +18,21 @@ const Users = ({dispatch, list, total, loading, page}) => {
             query: {page}
         }))
     }
+
+    function editHandler(id, values) {
+        dispatch({
+            type: 'users/path', 
+            payload: {
+                id,
+                values
+            }
+        })
+    }
+    
     return (
         <div>
             <h1> Users Page </h1>
-            <UserList users={list} total={total} loading={loading} onChange={pageChangeHandler} onDelete={deleteHandler} page={page}/>
+            <UserList users={list} total={total} loading={loading} onChange={pageChangeHandler} onDelete={deleteHandler} onEdit={editHandler} page={page}/>
         </div>
     )
     
