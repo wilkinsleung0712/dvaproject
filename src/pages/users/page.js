@@ -6,7 +6,10 @@ import { routerRedux } from 'dva/router';
 const Users = ({dispatch, list, total, loading, page}) => {
     
     function deleteHandler(id) {
-        console.warn(`TODO: ${id}`);
+        dispatch({
+            type: 'users/remove',
+            payload: id
+        })
     }
 
     function pageChangeHandler(page) {
@@ -18,7 +21,7 @@ const Users = ({dispatch, list, total, loading, page}) => {
     return (
         <div>
             <h1> Users Page </h1>
-            <UserList users={list} total={total} loading={loading} onChange={pageChangeHandler} page={page}/>
+            <UserList users={list} total={total} loading={loading} onChange={pageChangeHandler} onDelete={deleteHandler} page={page}/>
         </div>
     )
     

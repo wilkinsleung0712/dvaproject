@@ -18,6 +18,14 @@ export default {
         *fetch({ payload: { page = 1 } }, { call, put }) {
             const {data} = yield call(usersService.fetch, { page }); 
             yield put({type: 'save', payload: {data, page, total: 10}})
+        },
+        *remove({payload: id}, {call, put, select}) {
+            yield call(usersService.remove, id);
+            const page = yield select(state => state.users.page);
+            yield put({
+                type: 'fetch', 
+                payload: { page } 
+            })
         }
     },
     subscriptions: {

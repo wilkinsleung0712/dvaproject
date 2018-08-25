@@ -14,8 +14,6 @@ const Products = ({dispatch, products}) => {
         });
     }
 
-    console.log('products', products);
-
     return (
         <div>
             <h2>List of Products</h2>
