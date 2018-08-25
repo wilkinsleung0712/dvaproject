@@ -1,19 +1,19 @@
 import Header from './Header';
 import React from 'react';
 import styles from './index.css';
-import { withRouter } from 'dva/router';
+import withRouter from 'umi/withRouter';
 
-function Layout({children, location, history}) {
-    return (
-        <div className={styles.normal}>
-            <Header location={location} />
-            <div>
-                <div>
-                    {children}
-                </div>
-            </div>
+function Layout({ children, location }) {
+  return (
+    <div className={styles.normal}>
+      <Header location={location} />
+      <div className={styles.content}>
+        <div className={styles.main}>
+          {children}
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
 export default withRouter(Layout);

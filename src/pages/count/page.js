@@ -1,4 +1,4 @@
-import CounterView from '../components/CounterView';
+import CounterView from './components/CounterView';
 import React from 'react';
 import {connect} from 'dva';
 

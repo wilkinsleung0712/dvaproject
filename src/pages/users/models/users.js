@@ -23,12 +23,10 @@ export default {
     subscriptions: {
         setup({ dispatch, history }) {
             return history.listen(({ pathname, query }) => {
-              if (pathname === '/demo/users') {
+              if (pathname === '/users') {
                 dispatch({ 
                     type: 'fetch', 
-                    payload: {
-                        query
-                    } 
+                    payload: query
                 });
               }
             });

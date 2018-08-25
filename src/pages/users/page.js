@@ -1,5 +1,5 @@
 import React from 'react';
-import UserList from '../components/UserList';
+import UserList from './components/UserList';
 import { connect } from 'dva';
 import { routerRedux } from 'dva/router';
 
@@ -11,7 +11,7 @@ const Users = ({dispatch, list, total, loading, page}) => {
 
     function pageChangeHandler(page) {
         dispatch(routerRedux.push({
-            pathname: '/demo/users',
+            pathname: '/users',
             query: {page}
         }))
     }
