@@ -11,7 +11,7 @@ const Users = ({dispatch, list, total, loading, page}) => {
 
     function pageChangeHandler(page) {
         dispatch(routerRedux.push({
-            pathname: '/demo/users',
+            pathname: '/users',
             query: {page}
         }))
     }
