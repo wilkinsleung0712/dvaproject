@@ -13,10 +13,13 @@ function Header({ location }) {
         <Link to="/"><Icon type="home" />Home</Link>
       </Menu.Item>
       <Menu.Item key="/users">
-        <Link to="/users"><Icon type="bars" />Users</Link>
+        <Link to="/users"><Icon type="team" />Users</Link>
       </Menu.Item>
-      <Menu.Item key="/umi">
-        <a href="https://github.com/umijs/umi" target="_blank">umi</a>
+      <Menu.Item key="/count">
+        <Link to="/count"><Icon type="calculator" />Count</Link>
+      </Menu.Item>
+      <Menu.Item key="/products">
+       <Link to="/products"><Icon type="bars" />Products</Link>
       </Menu.Item>
       <Menu.Item key="/dva">
         <a href="https://github.com/dvajs/dva" target="_blank">dva</a>

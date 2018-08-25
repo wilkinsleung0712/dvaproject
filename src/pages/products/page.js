@@ -14,6 +14,8 @@ const Products = ({dispatch, products}) => {
         });
     }
 
+    console.log('products', products);
+
     return (
         <div>
             <h2>List of Products</h2>
@@ -24,8 +26,8 @@ const Products = ({dispatch, products}) => {
 
 
 
-export default connect(({products}) => ({
+export default connect(({products}) => (
     products
-}))(Products);
+))(Products);
 
 
